@@ -61,12 +61,12 @@ class _EditScreenState extends State<EditScreen> {
                     value: _gender,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
-                      label: Text('คำนำหน้่า',style: TextStyle(fontSize: 16),)
+                      label: Text('คำนำหน้า',style: TextStyle(fontSize: 16),)
                     ),
                     items: titleList.map((item){
                       return DropdownMenuItem(
                         value: item,
-                        child: Text(item, style: const TextStyle(color: Colors.black),));
+                        child: Text(item, style: const TextStyle(color: Colors.pink)));
                     }).toList(),
                     onChanged: (value){
                       setState(() {
