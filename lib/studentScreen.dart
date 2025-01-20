@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_flutter_app/edit_screen.dart';
 import 'package:student_flutter_app/student.dart';
 
 
@@ -105,7 +106,7 @@ class _StudentscreenState extends State<Studentscreen> {
         showModalBottomSheet(
           isScrollControlled: true,
           context: context, 
-          builder: (context){return });
+          builder: (context){return EditScreen(index: index);});
       },
     );
 
