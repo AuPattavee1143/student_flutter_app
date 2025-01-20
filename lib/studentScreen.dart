@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_flutter_app/add_screen.dart';
 import 'package:student_flutter_app/edit_screen.dart';
 import 'package:student_flutter_app/student.dart';
 
@@ -48,7 +49,12 @@ class _StudentscreenState extends State<Studentscreen> {
         ],
       ),
     ),
-    floatingActionButton: FloatingActionButton(backgroundColor: Colors.pink, onPressed: () {},
+    floatingActionButton: FloatingActionButton(backgroundColor: Colors.pink, 
+    onPressed: () {
+        Navigator.push(context,
+        MaterialPageRoute(builder: (context) => const AddScreen())
+      );
+    },
     child:  const Icon(Icons.add, size: 40,color: Colors.blue,),
     ),
     );
@@ -93,13 +99,13 @@ class _StudentscreenState extends State<Studentscreen> {
       title: Text('${index+1}. $id $name',
                   style: const TextStyle(
                     color: Colors.pinkAccent, 
-                    fontSize: 18,
+                    fontSize: 10,
                     fontWeight: FontWeight.w500),
       ),
       trailing: Text(score.toString(),
                   style: const TextStyle(
                     color: Colors.pinkAccent, 
-                    fontSize: 18,
+                    fontSize: 10,
                     fontWeight: FontWeight.w500),
       ),
       onTap: (){
