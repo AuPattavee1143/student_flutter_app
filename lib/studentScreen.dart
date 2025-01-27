@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_flutter_app/add_screen.dart';
 import 'package:student_flutter_app/edit_screen.dart';
+
 import 'package:student_flutter_app/student.dart';
 
 
@@ -14,6 +15,11 @@ class Studentscreen extends StatefulWidget {
 class _StudentscreenState extends State<Studentscreen> {
   @override
   Widget build(BuildContext context) {
+    Student.updateStudentItem = (){
+      setState(() {
+        Student.countItem = Student.studentItems.length;
+      });
+    };
     return Scaffold(
       body: SafeArea(child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
